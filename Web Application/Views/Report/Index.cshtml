@@ -1,0 +1,22 @@
+﻿@model Dictionary<string,int>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>Category Name</th>
+        <th>Amount of Books</th>
+        <th></th>
+    </tr>
+    
+        @foreach (KeyValuePair<string, int> item in Model)
+        {
+            <tr>
+                <td>@item.Key</td>
+                <td>@item.Value</td>
+            </tr>
+        }
+</table>
